@@ -60,13 +60,13 @@ button {
 
 .app {
   /* width: 100%; */
+  height: 100svh;
   max-width: 1016px;
   margin: 0 auto;
   padding: 5rem .5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 120px;
+  justify-content: space-between;
   font-size: 18px;
   position: relative;
 }
@@ -346,7 +346,7 @@ button {
 .translator__text__box {
   padding: 1rem 2.5rem 1rem 1rem;
   border-radius: 10px;
-  min-height: 250px;
+  height: 250px;
   resize: none;
   flex: 1;
   color: var(--text);
@@ -484,6 +484,10 @@ body.dark .footer__link:hover{
 }
 
 @media (max-width: 850px){
+  .app {
+    padding: 2rem .5rem;
+  }
+
   .translator {
     gap: .5rem;
   }
@@ -506,12 +510,13 @@ body.dark .footer__link:hover{
   }
 }
 
-@media (max-width: 850px){
+@media (max-width: 500px){
   .translator__text {
     flex-direction: column;
   }
   
   .translator__text__box {
-    height: 200px;
+    min-height: 150px;
+    height: 150px;
   }
 }
