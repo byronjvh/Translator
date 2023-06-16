@@ -38,7 +38,7 @@ function LangButton ({ language, getLang }) {
   return (
     <article className="translator__buttons__lang">
       <div ref={langButtonRef} onClick={() => setDropdown(prev => !prev)} className='translator__buttons__dropdown'>
-        <span>{currentLang.name}</span>
+        <p className='translator__buttons__lang__current'>{currentLang.name}</p>
         <span className={`dropdownArrow${dropdown ? ' open' : ''}`}><IoIosArrowDown size='1.75rem' /></span>
       </div>
       <form ref={formRef} onSubmit={(e) => e.preventDefault()} className={`translator__buttons__lang__form${dropdown ? ' dropdown' : ''}`} >

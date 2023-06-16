@@ -174,7 +174,7 @@ button {
 }
 
 .translator__buttons__dropdown {
-  padding: .75rem 1rem;
+  padding: .75rem 2.5rem 0.75rem 0.75rem;
   cursor: pointer;
   text-align: left;
   color: var(--text-negative);
@@ -189,6 +189,12 @@ button {
 
 .translator__buttons__dropdown:hover {
   background-color: var(--accent-light-orange);
+}
+
+.translator__buttons__lang__current {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .dropdownArrow {
@@ -511,6 +517,10 @@ body.dark .footer__link:hover{
 }
 
 @media (max-width: 500px){
+  .translator__buttons__lang__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .translator__text {
     flex-direction: column;
   }
