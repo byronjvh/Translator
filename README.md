@@ -4,13 +4,14 @@ This is a personal project that aims to create a simple translator application u
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
+* [API](#translation-api)
 * [Deployed project](#deploy)
 
 ## General info
 Simple translator aplication created with React and Vite.
 
 ## Technologies
-technologies and dependencies used in this project:
+Technologies and dependencies used in this project:
 * [React](https://es.reactjs.org/)
 * [Vite](https://vitejs.dev/)
 * [React Toastify](https://www.npmjs.com/package/react-toastify)
