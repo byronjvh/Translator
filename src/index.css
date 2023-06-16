@@ -37,7 +37,7 @@ body {
   --text: #222222;
   --text-negative: #fff;
 
-  height: 100svh;
+  /* height: 100svh; */
   overflow: hidden;
   background-color: var(--bg);
   transition: background-color .3s ease-out, color .3s ease-out;
@@ -491,7 +491,7 @@ body.dark .footer__link:hover{
 
 @media (max-width: 850px){
   .app {
-    padding: 2rem .5rem;
+    padding: 2rem .5rem 1rem;
   }
 
   .translator {
