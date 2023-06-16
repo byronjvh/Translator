@@ -4,7 +4,6 @@ import TranslatorButtons from '../components/TranslatorButtons/TranslatorButtons
 import { detectLang } from '../services/Detect'
 import { translate } from '../services/Translate'
 import Languages from '../Languages.json'
-import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -137,7 +136,6 @@ function Translator () {
         <TranslatorText />
       </div>
       <Footer />
-      <ToastContainer />
     </globalContext.Provider>
   )
 }
