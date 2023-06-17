@@ -50,8 +50,12 @@ function Translator () {
     try {
       const response = await translate(textToTranslate, sourceLang.code, targetLang.code)
 
-      if (response.status !== 'ok') {
-        setError('Error en la traducción')
+      if (response.status === 'fail') {
+        setError('Error: Revisa el idioma del que deseas traducir')
+        setTranslatedText('')
+        return
+      } else if (response.status !== 'ok') {
+        setError('Error al realizar la traducción')
         setTranslatedText('')
         return
       }
@@ -66,11 +70,15 @@ function Translator () {
   }
 
   const getSourceLang = (lang) => {
-    setSourceLang(lang)
+    if (lang.name.toLowerCase() === targetLang.name.toLowerCase()) {
+      invert()
+    } else setSourceLang(lang)
   }
 
   const getTargetLang = (lang) => {
-    setTargetLang(lang)
+    if (lang.name.toLowerCase() === sourceLang.name.toLowerCase()) {
+      invert()
+    } else setTargetLang(lang)
   }
 
   const getTextToTranslate = (text) => {
@@ -88,7 +96,9 @@ function Translator () {
 
   const sourceLangToDetectedLang = () => {
     const lang = Languages.find(language => language.code.toLowerCase() === detectedLangCode.toLowerCase())
-    setSourceLang(lang)
+    if (lang.name.toLowerCase() === targetLang.name.toLowerCase()) {
+      invert()
+    } else setSourceLang(lang)
   }
 
   useEffect(() => {
